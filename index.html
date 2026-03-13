@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Audrey Reinhard | Portfolio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,81 +18,140 @@
 --cornsilk:#fefae0;
 --papaya-whip:#faedcd;
 --light-bronze:#d4a373;
+--text-dark:#3a3a3a;
 }
-
-/* GLOBAL */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Inter', sans-serif;
 }
 
 body{
 background:var(--cornsilk);
-color:#3a3a3a;
+color:var(--text-dark);
 line-height:1.6;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
-height:60vh;
+nav{
+position:sticky;
+top:0;
+background:var(--cornsilk);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+border-bottom:1px solid #eee;
+z-index:10;
+}
+
+nav h3{
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:var(--text-dark);
+font-weight:500;
+transition:.2s;
+}
+
+nav a:hover{
+color:var(--light-bronze);
+}
+
+/* HERO */
+
+.hero{
+min-height:65vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:var(--beige);
+background:linear-gradient(180deg,var(--beige),var(--cornsilk));
+padding:40px;
 }
 
-header h1{
-font-size:60px;
-margin-bottom:10px;
+.hero h1{
+font-size:56px;
+margin-bottom:15px;
 }
 
-header p{
-font-size:20px;
+.hero p{
+max-width:700px;
+font-size:18px;
 opacity:.8;
 }
 
-/* SECTIONS */
+.hero-btn{
+margin-top:25px;
+padding:12px 26px;
+background:var(--light-bronze);
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.2s;
+}
+
+.hero-btn:hover{
+transform:translateY(-2px);
+}
+
+/* SECTION */
 
 section{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:80px 20px;
 }
 
-h2{
-font-size:32px;
-margin-bottom:25px;
-color:#4b4b4b;
+.section-title{
+font-size:34px;
+margin-bottom:30px;
+font-weight:600;
 }
 
-/* PROJECT CARDS */
+/* PROJECT GRID */
 
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+gap:28px;
 }
 
-.card{
+.project-card{
 background:var(--papaya-whip);
-padding:25px;
-border-radius:12px;
-transition:.3s;
+padding:28px;
+border-radius:14px;
+transition:.25s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 6px 15px rgba(0,0,0,.08);
+.project-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
 
-.card h3{
+.project-card h3{
 margin-bottom:10px;
+}
+
+.project-link{
+margin-top:10px;
+display:inline-block;
+color:var(--light-bronze);
+text-decoration:none;
+font-weight:600;
 }
 
 /* SKILLS */
@@ -99,32 +159,25 @@ margin-bottom:10px;
 .skills{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+gap:12px;
 }
 
 .skill{
 background:var(--tea-green);
-padding:10px 15px;
-border-radius:8px;
+padding:8px 14px;
+border-radius:7px;
 font-size:14px;
 }
 
-/* BUTTONS */
+/* CONTACT */
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-background:var(--light-bronze);
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
+.contact-links{
+display:flex;
+gap:30px;
+font-size:18px;
 }
 
-/* LINKS */
-
-a{
+.contact-links a{
 color:var(--light-bronze);
 text-decoration:none;
 font-weight:500;
@@ -134,8 +187,9 @@ font-weight:500;
 
 footer{
 text-align:center;
-padding:30px;
-opacity:.6;
+padding:35px;
+background:var(--beige);
+margin-top:50px;
 }
 
 </style>
@@ -144,81 +198,86 @@ opacity:.6;
 
 <body>
 
-<header>
+<nav>
 
-<h1>Audrey Reinhard</h1>
+<h3>Audrey Reinhard</h3>
 
-<p>Computer Engineering Student | Robotics | Embedded Systems | Computer Vision</p>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-<a class="btn" href="resume.pdf">Download Resume</a>
+</nav>
 
-</header>
+<section class="hero">
 
-<section>
-
-<h2>About Me</h2>
+<h1>Hi, I'm Audrey 👋</h1>
 
 <p>
-I'm a Computer Engineering student at UC Riverside with interests in embedded systems,
-robotics, and computer vision. I enjoy building systems that integrate hardware and
-software, especially real-time robotics platforms that use sensors, perception,
-and autonomous navigation.
+Computer Engineering student at UC Riverside focused on robotics,
+embedded systems, and computer vision. I enjoy building systems
+that combine hardware, sensors, and intelligent software.
+</p>
+
+<a class="hero-btn" href="resume.pdf">Download Resume</a>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+I've always been drawn to problem solving and puzzles. Building
+systems that connect software and hardware feels like an endless
+challenge. I enjoy designing systems that interact with the real
+world through sensors, perception, and autonomous decision making.
 </p>
 
 </section>
 
-<section>
+<section id="projects">
 
-<h2>Projects</h2>
+<h2 class="section-title">Projects</h2>
 
 <div class="projects">
 
-<div class="card">
-
+<div class="project-card">
 <h3>Autonomous Object Avoiding Robot</h3>
-
 <p>
-A small autonomous robot designed for sidewalk navigation using computer vision,
-ultrasonic sensors, and GPS/IMU data for path planning and obstacle avoidance.
+Autonomous robot designed for sidewalk navigation using computer
+vision, ultrasonic sensors, and GPS/IMU based path planning.
 </p>
-
-<a href="https://github.com/audy910">View Code</a>
-
+<a class="project-link" href="https://github.com/audy910">View Project</a>
 </div>
 
-<div class="card">
-
+<div class="project-card">
 <h3>Embedded Game System</h3>
-
 <p>
-A microcontroller-based game built with an ST7735 LCD display, joystick input,
-and PWM audio using an AVR microcontroller.
+Microcontroller-based game using an ST7735 LCD display, joystick
+input, and PWM audio built on an AVR platform.
 </p>
-
-<a href="https://github.com/audy910">View Code</a>
-
+<a class="project-link" href="https://github.com/audy910">View Project</a>
 </div>
 
-<div class="card">
-
+<div class="project-card">
 <h3>Computer Vision Motion Detection</h3>
-
 <p>
-Real-time detection and classification of pedestrians, bikes, and scooters using
-computer vision and machine learning models.
+Real-time detection and classification of pedestrians, bikes,
+and scooters using computer vision and machine learning models.
 </p>
-
-<a href="https://github.com/audy910">View Code</a>
-
+<a class="project-link" href="https://github.com/audy910">View Project</a>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="skills">
 
-<h2>Skills</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="skills">
 
@@ -240,22 +299,15 @@ computer vision and machine learning models.
 
 </section>
 
-<section>
+<section id="contact">
 
-<h2>Contact</h2>
+<h2 class="section-title">Contact</h2>
 
-<div class="contact">
+<div class="contact-links">
 
-<p>
-GitHub: <a href="https://github.com/audy910">github.com/audy910</a>
-</p>
+<a href="https://github.com/audy910">GitHub</a>
 
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/audrey-r-3550a11a8">
-linkedin.com/in/audrey-r-3550a11a8
-</a>
-</p>
+<a href="https://www.linkedin.com/in/audrey-r-3550a11a8/">LinkedIn</a>
 
 </div>
 
