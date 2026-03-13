@@ -766,6 +766,21 @@ footer span { color: var(--clay-lt); }
   .skills-grid { grid-template-columns: 1fr 1fr; }
 }
 
+.project-media {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  position: relative;      /* needed if you have badges absolutely positioned */
+  min-height: 300px;       /* ensures there’s enough height for vertical centering */
+}
+
+.project-media iframe {
+  width: 100%;
+  max-width: 640px; /* optional, keeps video from stretching too wide */
+  height: 300px;    /* fixed aspect ratio */
+  border: 0;
+}
+
 </style>
 </head>
 <body>
@@ -898,7 +913,7 @@ footer span { color: var(--clay-lt); }
             <!-- Example: <img src="robot-photo.jpg" alt="Autonomous Robot"> -->
             <!-- Example: <video src="demo.mp4" autoplay muted loop playsinline></video> -->
             <div class="project-media">
-            <iframe src="https://youtube.com/shorts/ojpg2oZ7Alc" 
+            <iframe src="https://www.youtube.com/embed/J7jprQ1VzI8?si=f2on7ME-kBRikuh8" 
                 frameborder="0" allowfullscreen
                 style="width:100%;height:100%;min-height:340px;">
             </iframe>
@@ -910,10 +925,10 @@ footer span { color: var(--clay-lt); }
             <div class="project-number">Project 01</div>
             <h3>Autonomous Object-Avoiding Robot</h3>
             <p class="project-description">
-              An autonomous robot designed for real-world sidewalk navigation. The system fuses multiple sensor modalities to perceive, plan, and react in real time without human intervention.
+              An autonomous robot designed for real-world sidewalk navigation. The system fuses multiple sensor modalities to perceive, plan, and react in real time without human intervention. I am currently improving upon this project. 
             </p>
             <ul class="project-details">
-              <li>Computer vision pipeline for obstacle detection and classification</li>
+              <li>Computer vision pipeline for lane centering and obstacle detection</li>
               <li>Ultrasonic sensor array for close-range proximity sensing</li>
               <li>GPS/IMU-based path planning and localization</li>
               <li>ROS2 node architecture for modular sensor-to-actuator control</li>
@@ -924,6 +939,7 @@ footer span { color: var(--clay-lt); }
               <span class="project-tag">C++</span>
               <span class="project-tag">GPS/IMU</span>
               <span class="project-tag">Python</span>
+
             </div>
             <div class="project-actions">
               <a class="project-link" href="https://github.com/audy910">View on GitHub</a>
@@ -936,12 +952,10 @@ footer span { color: var(--clay-lt); }
       <div class="project-card fade-up d1">
         <div class="project-inner">
           <div class="project-media">
-            <!-- Replace this placeholder with an <img> or <video> tag -->
-            <div class="project-media-placeholder" style="background:linear-gradient(135deg,#E4F0EF,#F0F7F7);">
-              <div class="placeholder-icon">🎮</div>
-              <span>Add a photo or video here</span>
-              <span class="placeholder-hint">Replace this block with an &lt;img&gt; or &lt;video&gt; tag pointing to your media file</span>
-            </div>
+            <iframe src="https://www.youtube.com/embed/Kq1CUCsPSZQ?si=E93LbTr7CWspqVl5" 
+                frameborder="0" allowfullscreen
+                style="width:100%;height:100%;min-height:340px;">
+            </iframe>
             <div class="media-badge">Embedded</div>
           </div>
           <div class="project-content">
@@ -969,6 +983,7 @@ footer span { color: var(--clay-lt); }
           </div>
         </div>
       </div>
+      
 
       <!-- PROJECT 3 -->
       <div class="project-card fade-up d1">
