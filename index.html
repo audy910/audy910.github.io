@@ -800,7 +800,6 @@ footer span { color: var(--clay-lt); }
 <section class="hero">
   <div class="hero-text">
     <div class="hero-eyebrow">Computer Engineering · UC Riverside</div>
-    <h1>Building systems that <em>think</em> and act.</h1>
     <p class="hero-sub">
       I design and build hardware-software systems that interact with the real world — from autonomous robots to embedded game platforms and computer vision pipelines.
     </p>
@@ -905,20 +904,14 @@ footer span { color: var(--clay-lt); }
 
     <div class="projects-list">
 
-      <!-- PROJECT 1 -->
+      <!-- PROJECT 1 Autonomous Robot -->
       <div class="project-card fade-up d1">
         <div class="project-inner">
           <div class="project-media">
-            <!-- Replace this placeholder with an <img> or <video> tag -->
-            <!-- Example: <img src="robot-photo.jpg" alt="Autonomous Robot"> -->
-            <!-- Example: <video src="demo.mp4" autoplay muted loop playsinline></video> -->
-            <div class="project-media">
             <iframe src="https://www.youtube.com/embed/J7jprQ1VzI8?si=f2on7ME-kBRikuh8" 
                 frameborder="0" allowfullscreen
-                style="width:100%;height:100%;min-height:340px;">
+                style="width:80%;height:50%;">
             </iframe>
-            <div class="media-badge">Robotics</div>
-            </div>
             <div class="media-badge">Robotics</div>
           </div>
           <div class="project-content">
@@ -936,9 +929,13 @@ footer span { color: var(--clay-lt); }
             <div class="project-tags">
               <span class="project-tag">ROS2</span>
               <span class="project-tag">OpenCV</span>
-              <span class="project-tag">C++</span>
+              <span class="project-tag">C/C++</span>
               <span class="project-tag">GPS/IMU</span>
               <span class="project-tag">Python</span>
+              <span class="project-tag">Ultrasonic Sensors</span>
+              <span class="project-tag">ESP32</span>
+              <span class="project-tag">NavQPlus</span>
+              <span class="project-tag">Motor Control</span>
 
             </div>
             <div class="project-actions">
@@ -948,13 +945,13 @@ footer span { color: var(--clay-lt); }
         </div>
       </div>
 
-      <!-- PROJECT 2 -->
+      <!-- PROJECT 2 - Embedded Systems - Space Invaders-->
       <div class="project-card fade-up d1">
         <div class="project-inner">
           <div class="project-media">
             <iframe src="https://www.youtube.com/embed/Kq1CUCsPSZQ?si=E93LbTr7CWspqVl5" 
                 frameborder="0" allowfullscreen
-                style="width:100%;height:100%;min-height:100px;">
+                style="width:70%;height:40%;">
             </iframe>
             <div class="media-badge">Embedded</div>
           </div>
@@ -983,17 +980,54 @@ footer span { color: var(--clay-lt); }
           </div>
         </div>
       </div>
-      
 
-      <!-- PROJECT 3 -->
+      <!-- PROJECT 3 - Robotics Camp-->
       <div class="project-card fade-up d1">
         <div class="project-inner">
           <div class="project-media">
-            <img src="motion.png" alt="Motion project" style="width:100%; height:100%; object-fit:cover;">
+            <img src="GroupPhoto.JPG" alt="Attendees Group Photo" style="width:80%; height:45%;">
             <div class="media-badge">Computer Vision</div>
             </div>
           <div class="project-content">
             <div class="project-number">Project 03</div>
+            <h3>Robotics Camp</h3>
+            <p class="project-description">
+              A robotic RC car with a Convolutional Neural Network (CNN) for real-time object detection. Designed and taught to UCR students in a month-long robotics camp. This project combines embedded systems, computer vision, and machine learning to create an interactive learning experience. 
+            </p>
+            <ul class="project-details">
+              <li>CNN for real-time object detection on contrained hardware</li>
+              <li>Raspberry Pi 4 along with AdaFruit Motor Hat for motor control</li>
+              <li>Arduino Nano connected via Bluetooth for remote control</li>
+              <li>Led team on designing curriculum and taught to other college students across different disciplines</li>
+              <li>3D Modeled and printed Chassis</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">C</span>
+              <span class="project-tag">Bluetooth</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Public Speaking</span>
+              <span class="project-tag">CAD</span>
+              <span class="project-tag">End-to-End Development</span>
+            </div>
+            <div class="project-actions">
+              <a class="project-link" href="https://github.com/audy910/Robotics-Camp">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PROJECT 4 - COMPUTER VISION Motion and Object detection -->
+      <div class="project-card fade-up d1">
+        <div class="project-inner">
+          <div class="project-media">
+            <img src="motion.png" alt="Motion project" style="width:80%; height:50%;">
+            <div class="media-badge">Computer Vision</div>
+            </div>
+          <div class="project-content">
+            <div class="project-number">Project 04</div>
             <h3>Computer Vision Motion Detection</h3>
             <p class="project-description">
               A real-time detection and classification system for urban micro-mobility. Built to identify and track pedestrians, cyclists, and scooters from live video streams using lightweight ML models.
@@ -1007,12 +1041,11 @@ footer span { color: var(--clay-lt); }
             <div class="project-tags">
               <span class="project-tag">YOLO</span>
               <span class="project-tag">Python</span>
-              <span class="project-tag">TinyML</span>
               <span class="project-tag">TensorFlow</span>
               <span class="project-tag">OpenCV</span>
             </div>
             <div class="project-actions">
-              <a class="project-link" href="https://github.com/audy910">View on GitHub</a>
+              <a class="project-link" href="https://github.com/audy910/Motion-in-Bikes-Scooters-and-Humans">View on GitHub</a>
             </div>
           </div>
         </div>
