@@ -931,10 +931,11 @@ footer span { color: var(--clay-lt); }
               An autonomous robot designed for real-world sidewalk navigation. The system fuses multiple sensor modalities to perceive, plan, and react in real time without human intervention. I am currently improving upon this project. 
             </p>
             <ul class="project-details">
-              <li>Computer vision pipeline for lane centering and obstacle detection</li>
-              <li>Ultrasonic sensor array for close-range proximity sensing</li>
-              <li>GPS/IMU-based path planning and localization</li>
-              <li>ROS2 node architecture for modular sensor-to-actuator control</li>
+              <li>Computer vision pipeline using OpenCV for real-time lane centering and dynamic obstacle detection</li>
+              <li>Ultrasonic sensor array for close-range proximity sensing with reactive collision avoidance</li>
+              <li>GPS/IMU fusion for outdoor path planning and continuous localization</li>
+              <li>ROS2 node architecture decoupling perception, decision-making, and actuation across separate devices for fault-isolated safety control</li>
+              <li>Motor control firmware written in bare-metal C on an Arduino Nano, communicating over UART for low-latency actuation</li>
             </ul>
             <div class="project-tags">
               <span class="project-tag">ROS2</span>
@@ -946,7 +947,7 @@ footer span { color: var(--clay-lt); }
               <span class="project-tag">ESP32</span>
               <span class="project-tag">NavQPlus</span>
               <span class="project-tag">Motor Control</span>
-
+              <span class="project-tag">UART</span>
             </div>
             <div class="project-actions">
               <a class="project-link" href="https://github.com/audy910">View on GitHub</a>
@@ -996,7 +997,7 @@ footer span { color: var(--clay-lt); }
         <div class="project-inner">
           <div class="project-media">
             <img src="GroupPhoto.JPG" alt="Attendees Group Photo" style="width:80%; height:45%;">
-            <div class="media-badge">Computer Vision</div>
+            <div class="media-badge">Robotics</div>
             </div>
           <div class="project-content">
             <div class="project-number">Project 03</div>
@@ -1092,6 +1093,38 @@ footer span { color: var(--clay-lt); }
             </div>
             <div class="project-actions">
               <a class="project-link" href="https://github.com/audy910/ChronotypeScheduler">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PROJECT 6 - Swipe in System -->
+      <div class="project-card fade-up d1">
+        <div class="project-inner">
+          <div class="project-media">
+            <img src="GET_PIC_SWIPE_IN_SYSTEM.png" alt="Swipe in System, Picture coming soon" style="width:90%; height:60%;">
+            <div class="media-badge">Software Engineering</div>
+            </div>
+          <div class="project-content">
+            <div class="project-number">Project 06</div>
+            <h3>Swipe in System</h3>
+            <p class="project-description">
+              A swipe in system used by the UCR Robotics lab for checking in out lab equipment. The system uses a magnetic card reader to read student IDs and logs check-in/check-out times for each piece of equipment. It also has an admin dashboard for managing inventory and generating usage reports. Connects to google sheets for data storage and real-time updates.
+            </p>
+              <ul class="project-details">
+                <li>Built to be deployed on Raspberry Pi in a stand-alone system.</li>
+                <li>System integrates with a magnetic card reader for student ID verification.</li>
+                <li>Uses Google Sheets API for data storage and real-time updates along with SQLite for local data persistence.</li>
+                <li>Sends email notifications for check-in/check-out events and account creation.</li>
+              </ul>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Raspberry Pi</span>
+              <span class="project-tag">CAD</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Google Sheets API</span>
+            </div>
+            <div class="project-actions">
+              <a class="project-link" href="https://github.com/audy910/Swipe-In-System">View on GitHub</a>
             </div>
           </div>
         </div>
